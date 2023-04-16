@@ -38,5 +38,5 @@ SKIP_DOCKER=true ./scripts/init_db.sh
 # Check Performed Migrations
 
 ```bash
-PGPASSWORD=password psql -U postgres -h localhost newsletter -c "SELECT * FROM _sqlx_migrations"
+psql "postgresql://postgres:password@localhost/newsletter" -c "SELECT * FROM _sqlx_migrations"
 ```
